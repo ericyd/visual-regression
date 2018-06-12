@@ -31,7 +31,7 @@ module.exports = {
 
         // path segments to define pages. Will be appended to baseURL
         paths: [
-            'ericyd/pa11y-reporter'
+            'ericyd/visual-regression'
         ],
 
         // true will skip testing for all public pages
