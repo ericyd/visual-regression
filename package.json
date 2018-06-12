@@ -1,0 +1,36 @@
+{
+  "name": "visual-regression",
+  "version": "1.0.0",
+  "description": "Scripts to make visual regression testing easy",
+  "main": "index.js",
+  "scripts": {
+    "cleanup": "node ./scripts/cleanup.js",
+    "capture": "node ./scripts/testcafe-runner.js",
+    "capture:expected": "node ./scripts/testcafe-runner.js expected",
+    "compare": "mocha ./scripts/compare-images.js --reporter mochawesome",
+    "test": "npm run cleanup && npm run capture && npm run compare"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericyd/visual-regression.git"
+  },
+  "keywords": [
+    "visual",
+    "regression",
+    "automation"
+  ],
+  "author": "Eric Dauenhauer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericyd/visual-regression/issues"
+  },
+  "homepage": "https://github.com/ericyd/visual-regression#readme",
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.0.2",
+    "pixelmatch": "^4.0.2",
+    "pngjs": "^3.3.3",
+    "rimraf": "^2.6.2",
+    "testcafe": "^0.20.3"
+  }
+}
