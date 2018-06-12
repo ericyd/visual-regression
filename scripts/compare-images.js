@@ -10,7 +10,6 @@ const fs          = require('fs');
 const path        = require('path');
 const assert      = require('assert');
 const rimraf      = require('rimraf');
-const open        = require('open');
 const pixelmatch  = require('pixelmatch');
 const PNG         = require('pngjs').PNG;
 const addContext  = require('mochawesome/addContext');
@@ -71,13 +70,12 @@ describe('screenshot comparisons', function() {
     });
 });
 
-console.info("Run `npm run open` to view your results after this script completes!");
+console.info("Open the results in mochawesome-report when this script complese!");
 
 
 
 function compareScreenshots(expectedFilePath, actualFilePath, resultFilePath) {
     return new Promise((resolve, reject) => {
-        
         const img1 = fs.createReadStream(actualFilePath).pipe(new PNG()).on('parsed', doneReading);
         const img2 = fs.createReadStream(expectedFilePath).pipe(new PNG()).on('parsed', doneReading);
   

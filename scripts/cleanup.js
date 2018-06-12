@@ -6,7 +6,6 @@ const rimraf = require('rimraf');
 const config = require('../config');
 
 const directoriesToRemove = [
-    'html',
     config.screenshots.actual,
     config.screenshots.diff
 ]

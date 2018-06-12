@@ -41,12 +41,7 @@ if (singlePage) {
         if (requiresAuth) {
             await t.navigateTo(page);
         }
-        if (!config.skipScreenshots) {
-            await getScreenshots(t);
-        }
-        if (!config.skipWCAG) {
-            await getHTML(t);
-        }
+        await getScreenshots(t);
     });
 }
 
@@ -59,12 +54,7 @@ if (!config.public.skip && !singlePage) {
     config.public.paths.forEach(path => {
         const page = `${config.public.baseURL}${path}`;
         test.page(page)(`get screenshots at ${page}`, async t => {
-            if (!config.skipScreenshots) {
-                await getScreenshots(t);
-            }
-            if (!config.skipWCAG) {
-                await getHTML(t);
-            }
+            await getScreenshots(t);
         });
     });
 }
@@ -92,12 +82,7 @@ if (!config.auth.skip && !singlePage) {
         
         test(`get screenshots at ${page}`, async t => {
             await t.navigateTo(page);
-            if (!config.skipScreenshots) {
-                await getScreenshots(t);
-            }
-            if (!config.skipWCAG) {
-                await getHTML(t);
-            }
+            await getScreenshots(t);
         });
     });
 }

@@ -7,7 +7,6 @@ const path = require('path');
 const config = require('../config');
 
 const directoriesToAdd = [
-    'html',
     path.dirname(config.screenshots.expected),
     path.dirname(config.screenshots.actual),
     path.dirname(config.screenshots.diff),

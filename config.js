@@ -27,12 +27,12 @@ module.exports = {
 
     // definitions for public pages
     public: {
-        baseURL: 'http://www.testsite.com/',
+        baseURL: 'http://www.github.com/',
 
         // path segments to define pages. Will be appended to baseURL
         paths: [
-            'path1',
-            'path2'
+            'ericyd/pa11y-reporter',
+            'ericyd/visual-regression'
         ],
 
         // true will skip testing for all public pages
