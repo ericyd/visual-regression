@@ -27,12 +27,11 @@ module.exports = {
 
     // definitions for public pages
     public: {
-        baseURL: 'http://www.github.com/',
+        baseURL: 'https://www.github.com/',
 
         // path segments to define pages. Will be appended to baseURL
         paths: [
-            'ericyd/pa11y-reporter',
-            'ericyd/visual-regression'
+            'ericyd/pa11y-reporter'
         ],
 
         // true will skip testing for all public pages
@@ -63,7 +62,7 @@ module.exports = {
 
         // path segments to define pages. Will be appended to baseURL
         paths: [
-            'accessibility-boilerplate'
+            'visual-regression'
         ],
 
         // true will skip testing for all auth pages
